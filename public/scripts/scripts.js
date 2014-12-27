@@ -1,20 +1,4 @@
 $(function() {
-	/*$('form').submit(function(event) {
-		event.preventDefault();
-		var location = {
-			'latitude' : $('#latitude').val(),
-			'longitude' : $('#longitude').val()
-		};
-		$.ajax({
-			type : 'POST',
-			url: 'findWeather.php',
-			data: location,
-			dataType: 'json',
-			encode: true
-		}).done(function(data) {
-			$('#forms').append("<p>" + data + "</p>");
-		});
-	});*/
 
 	$('form').submit(function(event) {
 		var location = {
