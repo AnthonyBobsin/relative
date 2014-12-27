@@ -111,7 +111,7 @@ body {
   /* slide over group 2 and 4 */ }
 
 #group3 .parallax__layer--base {
-  background: #99d865; }
+  background: #73DAD6; }
 
 #group4 {
   z-index: 2;
@@ -126,7 +126,7 @@ body {
   /* slide over group 4 and 6 */ }
 
 #group5 .parallax__layer--base {
-  background: #d6e564; }
+  background: #EE5454; }
 
 #group6 {
   z-index: 2;
@@ -141,6 +141,6 @@ body {
   /* slide over group 7 */ }
 
 #group7 .parallax__layer--base {
-  background: #fff164; }
+  background: #81FA7D; }
 
 /*# sourceMappingURL=output.css.map */

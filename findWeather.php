@@ -9,7 +9,7 @@
 
 	$condition = $forecast->getCurrentConditions($_POST['latitude'], $_POST['longitude'], $units, $lang);
 
-	$data = $condition->getTemperature() . "&deg";
+	$data = $condition->getTemperature() . "&degC";
 
 	echo json_encode($data);
 
