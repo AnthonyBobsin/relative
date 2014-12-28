@@ -15,12 +15,12 @@
 	if ($status=="OK") {
 	    $Lat = $xml->result->geometry->location->lat;
 	    $Lon = $xml->result->geometry->location->lng;
-	    //$LatLng = "$Lat,$Lon";
+	    $condition = $forecast->getCurrentConditions($Lat, $Lon, $units, $lang);
+		$data = $condition->getTemperature() . "&degC";
 	}
-
-	$condition = $forecast->getCurrentConditions($Lat, $Lon, $units, $lang);
-
-	$data = $condition->getTemperature() . "&degC";
+	else {
+		$data = "Error Occured";
+	}
 
 	echo json_encode($data);
 
