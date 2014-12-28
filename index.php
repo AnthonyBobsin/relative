@@ -48,16 +48,16 @@
         <div class="title" id="forms">
 	        <form action="findWeather.php" method="POST">
 	        	<p>
-	        		<!--<label for="city"> City </label> <br />
-	        		<input type="text" name="city" id="city" />-->
-	        		<label for="latitude">Latitude </label> <br />
-	        		<input type="text" name="latitude" class="form-control" id="latitude" />
+	        		<label for="location"> Location</label> <br />
+	        		<input type="text" name="location" class="form-control" id="location" />
+	        		<!--<label for="latitude">Latitude </label> <br />
+	        		<input type="text" name="latitude" class="form-control" id="latitude" />-->
 	        	</p>
 
-	        	<p>
+	        	<!--<p>
 	        		<label for="longitude">Longitude</label> <br />
 	        		<input type="text" name="longitude" class="form-control" id="longitude" />
-	        	</p>
+	        	</p>-->
 	        	<p id="switcharoo">
 	        		<button type="submit" class="btn">Get Weather<span class="fa fa-arrow-right"></span></button>
 	        	</p>

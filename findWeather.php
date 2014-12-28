@@ -6,8 +6,19 @@
 	$units = 'si';
 	$lang = 'en';
 	$forecast = new ForecastIO($api_key);
+	
+	
+	$Address = urlencode($_POST['location']);
+	$request_url = "http://maps.googleapis.com/maps/api/geocode/xml?address=".$Address."&sensor=true";
+	$xml = simplexml_load_file($request_url) or die("url not loading");
+	$status = $xml->status;
+	if ($status=="OK") {
+	    $Lat = $xml->result->geometry->location->lat;
+	    $Lon = $xml->result->geometry->location->lng;
+	    //$LatLng = "$Lat,$Lon";
+	}
 
-	$condition = $forecast->getCurrentConditions($_POST['latitude'], $_POST['longitude'], $units, $lang);
+	$condition = $forecast->getCurrentConditions($Lat, $Lon, $units, $lang);
 
 	$data = $condition->getTemperature() . "&degC";
 

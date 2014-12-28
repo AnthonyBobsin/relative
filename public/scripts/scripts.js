@@ -1,9 +1,7 @@
 $(function() {
-
 	$('form').submit(function(event) {
 		var location = {
-			'latitude' : $('#latitude').val(),
-			'longitude' : $('#longitude').val()
+			'location' : $('#location').val()
 		};
 		$('#switcharoo').empty().append("Please wait...");
 		$.ajax({
@@ -14,12 +12,6 @@ $(function() {
 			encode: true
 		}).done(function(data) {
 			$('#switcharoo').empty().append("<p>" + data + "</p>");
-			/*if (!data.success) {
-				$('#switcharoo').empty().append("Error occured.");
-			}
-			else {
-				$('#switcharoo').empty().append("<p>" + data + "</p>");
-			}*/
 		});
 		event.preventDefault();
 	});
