@@ -1,15 +1,17 @@
 <?php
 
 	require_once 'forecast.io.php';
+	
+	date_default_timezone_set('America/Toronto');
 
 	$api_key = '94554c8a6559d0c2c5cd86c818780f32';
 	$units = 'si';
 	$lang = 'en';
-	date_default_timezone_set('America/Toronto');
 	$current = time();
 	$yesterday = strtotime("-1 day", $current);
 	$forecast = new ForecastIO($api_key);
 	$data = array();
+	$
 	
 	
 	$Address = urlencode($_POST['location']);
@@ -33,6 +35,7 @@
 			$yesterday_min = $condition->getMinTemperature();
 			$yesterday_max = $condition->getMaxTemperature();
 			$yesterday_avg = (int)(($yesterday_max + $yesterday_min) / 2);
+			//Add: Check to see what time of day it is and return min/max/avg depending on that.
 			$data['yesterday'] = $yesterday_avg . "˚";
 		}
 
