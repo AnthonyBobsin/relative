@@ -195,6 +195,14 @@ class ForecastIOConditions{
     }
   }
   /**
+  * Get the timezone
+  *
+  * @return String
+  */
+  function getTimezone() {
+    return $this->raw_data->timezone;
+  }
+  /**
    * Get the pressure
    *
    * @return String
