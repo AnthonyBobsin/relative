@@ -5,8 +5,6 @@
     <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css" />
     <link rel="stylesheet" href="./public/stylesheets/output.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
-	<script src="./public/scripts/bootstrap.min.js"></script> 
-	<script src="./public/scripts/scripts.js"></script>
 	<title>Relative</title>
 </head>
 <body>
@@ -56,7 +54,6 @@
 	        		<button type="submit" class="btn">Get Weather<span class="fa fa-arrow-right"></span></button>
 	        	</p>
 	        </form>
-
         </div>
       </div>
     </div>
@@ -109,7 +106,7 @@
       </div>
     </div>
   </div>
-
-
+	<script src="./public/scripts/bootstrap.min.js"></script> 
+	<script src="./public/scripts/scripts.js"></script>
 </body>
 </html>

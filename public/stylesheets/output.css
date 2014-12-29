@@ -143,4 +143,17 @@ body {
 #group7 .parallax__layer--base {
   background: #81FA7D; }
 
+/* Search Page */
+#location {
+  width: 40vw; }
+
+#switcharoo {
+  height: 100px; }
+
+.result-left {
+  float: left; }
+
+.result-right {
+  float: right; }
+
 /*# sourceMappingURL=output.css.map */

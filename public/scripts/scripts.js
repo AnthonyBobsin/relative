@@ -11,7 +11,11 @@ $(function() {
 			dataType: 'json',
 			encode: true
 		}).done(function(data) {
-			$('#switcharoo').empty().append("<p>" + data + "</p>");
+			$('#switcharoo').empty().append('<span class="result-left">Yesterday:</span><span class="result-right">'
+													+ data['yesterday'] + 
+												'</span></br><span class="result-left">Current:</span><span class="result-right">'
+													+ data['current'] + 
+												'</span>');
 		});
 		event.preventDefault();
 	});

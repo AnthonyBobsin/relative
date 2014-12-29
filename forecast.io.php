@@ -20,7 +20,7 @@ class ForecastIO{
         $this->api_key . '/' .
         $latitude . ',' . $longitude .
         '?units=' . $units . '&lang=' . $language .
-        ( $timestamp ? ',' . $timestamp : '' ) .
+        ( $timestamp ? '&' . $timestamp : '' ) .
         ( $exclusions ? '&exclude=' . $exclusions : '' );
       
       /**
