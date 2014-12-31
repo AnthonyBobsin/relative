@@ -75,8 +75,7 @@ body {
   transform: translateZ(-600px) scale(3);
   z-index: 2; }
 
-/* demo styles
---------------------------------------------- */
+/* demo styles ----------------------------------- */
 .parallax {
   font-size: 200%; }
 
@@ -89,8 +88,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-/* style the groups
---------------------------------------------- */
+/* style the groups ------------------------------- */
 #group1 {
   z-index: 5;
   /* slide over group 2 */ }
@@ -147,7 +145,11 @@ body {
 #location {
   width: 40vw; }
 
+#labels {
+  text-align: center; }
+
 #switcharoo {
+  text-align: center;
   height: 100px; }
 
 .result-left {
@@ -155,5 +157,12 @@ body {
 
 .result-right {
   float: right; }
+
+#go-down {
+  /*keep it within parallax group*/
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0; }
 
 /*# sourceMappingURL=output.css.map */

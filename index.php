@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css" />
     <link rel="stylesheet" href="./public/stylesheets/output.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+    <script src="./public/scripts/jquery.min.js"></script><!-- Switch to google for production -->
 	<title>Relative</title>
 </head>
 <body>
@@ -42,20 +42,27 @@
 
 <div class="parallax">
     <div id="group1" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title" id="forms">
-	        <form action="findWeather.php" method="POST">
-	        	<p>
-	        		<label for="location"> Location</label> <br />
-	        		<input type="text" name="location" class="form-control" id="location" />
-	        	</p>
+        <div class="parallax__layer parallax__layer--base">
 
-	        	<p id="switcharoo">
-	        		<button type="submit" class="btn">Get Weather<span class="fa fa-arrow-right"></span></button>
-	        	</p>
-	        </form>
-        </div>
-      </div>
+			<div class="title" id="forms">
+			    <form action="findWeather.php" method="POST">
+		    	<p>
+				    <label for="location" id="labels">Location</label><br/>
+				    <input type="text" name="location" class="form-control" id="location"/>
+				</p>
+
+				<p id="switcharoo">
+				    <button type="submit" class="btn btn-default">Get Weather<span class="fa fa-arrow-right"></span></button>
+				</p>
+				</form>
+				<div id="go-down">
+				    <button type="button" class="btn btn-default btn-lg">
+						<span class="glyphicon glyphicon-chevron-down"></span>
+					</button>
+				</div>
+			</div>
+		 	
+		</div>
     </div>
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
@@ -107,6 +114,7 @@
     </div>
   </div>
 	<script src="./public/scripts/bootstrap.min.js"></script> 
+	<script src="./public/scripts/jquery-scrollto/lib/jquery-scrollto.js"></script>
 	<script src="./public/scripts/scripts.js"></script>
 </body>
 </html>
