@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css" />
     <link rel="stylesheet" href="./public/stylesheets/output.css" />
     <script src="./public/scripts/jquery.min.js"></script><!-- Switch to google for production -->
+    <script src="./public/scripts/scripts.js"></script>
 	<title>Relative</title>
 </head>
 <body>
@@ -66,7 +67,8 @@
     </div>
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
+        <div class="title">
+        </div>
       </div>
       <div class="parallax__layer parallax__layer--back">
         <div class="title"></div>
@@ -77,7 +79,9 @@
         <div class="title">Foreground Layer</div>
       </div>-->
       <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
+        <div class="title" id="details">
+
+        </div>
       </div>
     </div>
     <div id="group4" class="parallax__group">
@@ -115,6 +119,5 @@
   </div>
 	<script src="./public/scripts/bootstrap.min.js"></script> 
 	<script src="./public/scripts/jquery-scrollto/lib/jquery-scrollto.js"></script>
-	<script src="./public/scripts/scripts.js"></script>
 </body>
 </html>

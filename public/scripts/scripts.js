@@ -14,10 +14,11 @@ $(function() {
 			encode: true
 		}).done(function(data) {
 			$('#switcharoo').empty().append('<span class="result-left">Yesterday:</span><span class="result-right">'
-													+ data['yesterday'] + 
+													+ data['yesterday']['temperature'] + 
 												'</span></br><span class="result-left">Current:</span><span class="result-right">'
-													+ data['current'] + 
+													+ data['current']['temperature'] + 
 												'</span></br>');
+			$('#details').append();
 			$('#go-down').css("display", "inline");
 			/*  Add: Hide all other parallax groups
 			 	If data['weather'] == weather
