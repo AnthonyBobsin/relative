@@ -13,6 +13,8 @@ $(function() {
 			dataType: 'json',
 			encode: true
 		}).done(function(data) {
+			$('#group2').css("display", "block");
+			$('#group3').css("display", "block");
 			$('#switcharoo').empty().append('<span class="result-left">Yesterday:</span><span class="result-right">'
 													+ data['yesterday']['temperature'] + 
 												'</span></br><span class="result-left">Current:</span><span class="result-right">'
@@ -37,6 +39,7 @@ $(function() {
 
 
 			$('#go-down').css("display", "inline");
+
 			/*  Add: Hide all other parallax groups
 			 	If data['weather'] == weather
 			 		show parallax with that weather picture
@@ -52,4 +55,11 @@ $(function() {
 	});
 
 	$('#go-down').css("display", "none");
+	$('#group2').css("display", "none");
+	$('#group3').css("display", "none");
+	$('#group4').css("display", "none");
+	$('#group5').css("display", "none");
+	$('#group6').css("display", "none");
+	$('#group7').css("display", "none");
+
 });
