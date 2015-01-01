@@ -21,7 +21,7 @@
 	if ($status=="OK") {
 	    $Lat = $xml->result->geometry->location->lat;
 	    $Lon = $xml->result->geometry->location->lng;
-	    //Get current conditions and temperature
+	    //Get current conditions and values
 	    $current_condition = $forecast->getCurrentConditions($Lat, $Lon, $units, $lang);
 	    $timezone = $current_condition->getTimezone();
 	    date_default_timezone_set($timezone);
@@ -36,6 +36,7 @@
 	    $precipitation_chance = $current_condition->getPrecipitationProbability();
 	    $precipitation_type = $current_condition->getPrecipitationType();
 	    $precipitation_intensity = $current_condition->getPrecipitationIntensity();
+	    $icon = $current_condition->getIcon();
 
 	    $data['current']['summary'] = $summary;
 	    $data['current']['temperature'] = $current_temp . "˚C";
@@ -47,10 +48,11 @@
 	    $data['current']['precipitation_chance'] = $precipitation_chance;
 	    $data['current']['precipitation_type'] = $precipitation_type;
 	    $data['current']['precipitation_intensity'] = $precipitation_intensity;
+	    $data['current']['icon'] = $icon;
 
 	    $data['summary'] = $week_summary;
 
-		//Get conditions for yesterday
+		//Get conditions for yesterday and values
 		$yesterday_condition = $forecast->getPreviousConditions($Lat, $Lon, $units, $lang, $yesterday);
 		if ($yesterday_condition == false) {
 			$data['yesterday']['temperature'] = "Error";
@@ -67,6 +69,7 @@
 		    $precipitation_chance = $yesterday_condition->getPrecipitationProbability();
 		    $precipitation_type = $yesterday_condition->getPrecipitationType();
 		    $precipitation_intensity = $yesterday_condition->getPrecipitationIntensity();
+		    $icon = $yesterday_condition->getIcon();
 
 		    $data['yesterday']['summary'] = $summary;
 		    $data['yesterday']['temperature'] = $current_temp . "˚C";
@@ -78,6 +81,7 @@
 		    $data['yesterday']['precipitation_chance'] = $precipitation_chance;
 		    $data['yesterday']['precipitation_type'] = $precipitation_type;
 		    $data['yesterday']['precipitation_intensity'] = $precipitation_intensity;
+		    $data['yesterday']['icon'] = $icon;
 		}
 	}
 	else {

@@ -165,4 +165,27 @@ body {
   left: 0;
   right: 0; }
 
+/* Details Page */
+#details {
+  overflow: scroll;
+  height: 80vh;
+  margin-top: 50px; }
+  #details .data {
+    border-top: 1px solid #3D3D3D;
+    height: 50px; }
+  #details .head {
+    border-bottom: 1px solid #3D3D3D;
+    bottom: 0;
+    height: 50px; }
+  #details #rightside {
+    padding-left: 0; }
+  #details #midside {
+    padding-left: 0;
+    padding-right: 0; }
+  #details #leftside {
+    padding-right: 0; }
+  #details .sum {
+    height: 80px;
+    overflow: scroll; }
+
 /*# sourceMappingURL=output.css.map */

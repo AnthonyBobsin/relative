@@ -2,6 +2,7 @@
 
 $gray-white: #DBDADA;
 $dark-gray: #8D8A8A;
+$darker-gray: #3D3D3D;
 
 /* universal */
 
@@ -198,6 +199,37 @@ body {
   	left:0;
   	right: 0;
 
+}
+
+/* Details Page */
+
+#details {
+	overflow: scroll;
+	height: 80vh;
+	margin-top: 50px;
+	.data {
+		border-top: 1px solid $darker-gray;
+		height: 50px;
+	}
+	.head {
+		border-bottom: 1px solid $darker-gray;
+		bottom: 0;
+		height: 50px;
+	}
+	#rightside {
+		padding-left: 0;
+	}
+	#midside {
+		padding-left : 0;
+		padding-right: 0;
+	}
+	#leftside {
+		padding-right:0;
+	}
+	.sum {
+		height: 80px;
+		overflow:scroll;
+	}
 }
   
 

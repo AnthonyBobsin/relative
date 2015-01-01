@@ -111,5 +111,8 @@ class ForecastIOConditions {
 	function getTimezone() {
 		return $this->data->timezone;
 	}
+	function getIcon() {
+		return $this->data->currently->icon;
+	}
 
 }
