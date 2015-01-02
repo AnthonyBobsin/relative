@@ -65,7 +65,7 @@
 		    $week_summary = $yesterday_condition->getWeeklySummary();
 		    $apparent = (int)($yesterday_condition->getApparentTemperature());
 		    $humidity = $yesterday_condition->getHumidity();
-		    $windspeed = $yesterday_condition->getWindSpeed();
+		    $windSpeed = $yesterday_condition->getWindSpeed();
 		    $precipitation_chance = $yesterday_condition->getPrecipitationProbability();
 		    $precipitation_type = $yesterday_condition->getPrecipitationType();
 		    $precipitation_intensity = $yesterday_condition->getPrecipitationIntensity();
