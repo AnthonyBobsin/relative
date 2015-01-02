@@ -1,5 +1,16 @@
 $(function() {
 
+	var cache = [];
+	// Arguments are image paths relative to the current page.
+	$.preLoadImages = function() {
+	  var args_len = arguments.length;
+	  for (var i = args_len; i--;) {
+	    var cacheImage = document.createElement('img');
+	    cacheImage.src = arguments[i];
+	    cache.push(cacheImage);
+	  }
+	}
+
 	$('form').submit(function(event) {
 		var location = {
 			'location' : $('#location').val()
@@ -32,7 +43,7 @@ $(function() {
 				'clear-day': "./public/icons/clear-day.jpg" 
 			};
 			var icon_img = icon_img_map[icon] || icon_img_map['default'];
-			new Image().src = icon_img;
+			jQuery.preLoadImages(icon_img);
 
 			$('#imageswap').css("background-image", 'url("' + icon_img + '")');
 
@@ -58,9 +69,6 @@ $(function() {
 			$('#humidity').empty().append('<p>' + (data['current']['humidity']) + '%</p>');
 			$('#windSpeedY').empty().append('<p>' + data['yesterday']['windSpeed'] + 'mph</p>');
 			$('#windSpeed').empty().append('<p>' + data['current']['windSpeed'] + 'mph</p>');
-
-
-
 
 			$('#go-down').css("display", "inline");
 
