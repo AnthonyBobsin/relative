@@ -58,7 +58,7 @@
 	ScrollTo = {
 		// Configuration
 		config: {
-			duration: 2000,
+			duration: 3500,
 			easing: 'swing',
 			callback: undefined,
 			durationMode: 'each',

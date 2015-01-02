@@ -66,210 +66,53 @@
 		</div>
     </div>
     <div id="group2" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">
-        </div>
+      <div class="parallax__layer parallax__layer--back" id="imageswap">
+        <div class="title"></div>
       </div>
-      <div class="parallax__layer parallax__layer--back">
+      <div class="parallax__layer parallax__layer--base">
         <div class="title"></div>
       </div>
     </div>
     <div id="group3" class="parallax__group">
-      <!--<div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>-->
       <div class="parallax__layer parallax__layer--base">
         <div class="title container" id="details">
         <div class="row">
         	<div id="summary">Weekly</div></br>
         	<div class="col-md-4" id="leftside">
-        		<div class="head"></div>
-        		<div id="daySummaryY" class="data sum"></div>
-        		<div class="head"></div>
+        		<div id="topheadY" class="data"></div>
+        		<div id="daySummaryY" class="data sum "></div>
         		<div id="temperatureY" class="data"></div>
-        		<div class="head"></div>
         		<div id="apparentY" class="data"></div>
-        		<div class="head"></div>
         		<div id="highLowY" class="data"></div>
-        		<div class="head"></div>
         		<div id="precipitationY" class="data"></div>
-        		<div class="head"></div>
         		<div id="humidityY" class="data"></div>
-        		<div class="head"></div>
         		<div id="windSpeedY" class="data"></div>
         	</div>
         	<div class="col-md-4" id="midside">
-        		<div class="head">Daily</div>
-        		<div class="data sum"></div>
-        		<div class="head">Temperature</div>
-        		<div class="data"></div>
-        		<div class="head">Feels Like</div>
-        		<div class="data"></div>
-        		<div class="head">Low / High</div>
-        		<div class="data"></div>
-        		<div class="head">Precipitation</div>
-        		<div class="data"></div>
-        		<div class="head">Humidity</div>
-        		<div class="data"></div>
-        		<div class="head">Wind</div>
-        		<div class="data"></div>
+        		<div class="data head mid"></div>
+        		<div class="data sum head"><p>Daily</p></div>
+        		<div class="data head"><p>Temperature</p></div>
+        		<div class="data head"><p>Feels Like</p></div>
+        		<div class="data head"><p>Low / High</p></div>
+        		<div class="data head"><p>Precipitation</p></div>
+        		<div class="data head"><p>Humidity</p></div>
+        		<div class="data head"><p>Wind</p></div>
         	</div>
         	<div class="col-md-4" id="rightside">
-        		<div class="head"></div>
+        		<div id="tophead" class="data"></div>
         		<div id="daySummary" class="data sum"></div>
-        		<div class="head"></div>
         		<div id="temperature" class="data"></div>
-        		<div class="head"></div>
         		<div id="apparent" class="data"></div>
-        		<div class="head"></div>
         		<div id="highLow" class="data"></div>
-        		<div class="head"></div>
         		<div id="precipitation" class="data"></div>
-        		<div class="head"></div>
         		<div id="humidity" class="data"></div>
-        		<div class="head"></div>
         		<div id="windSpeed" class="data"></div>
         	</div>
         </div>
         </div>
       </div>
     </div>
-    <div id="group4" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title"></div>
-      </div>
-      <!--<div class="parallax__layer parallax__layer--deep">
-        <div class="title">Deep Background Layer</div>
-      </div>-->
-    </div>
-    <div id="group5" class="parallax__group">
-      <!--<div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>-->
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title container" id="details">
-        <div class="row">
-        	<div id="summary">Weekly</div></br>
-        	<div class="col-md-4" id="leftside">
-        		<div class="head"></div>
-        		<div id="daySummaryY" class="data sum"></div>
-        		<div class="head"></div>
-        		<div id="temperatureY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="apparentY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="highLowY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="precipitationY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="humidityY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="windSpeedY" class="data"></div>
-        	</div>
-        	<div class="col-md-4" id="midside">
-        		<div class="head">Daily</div>
-        		<div class="data sum"></div>
-        		<div class="head">Temperature</div>
-        		<div class="data"></div>
-        		<div class="head">Feels Like</div>
-        		<div class="data"></div>
-        		<div class="head">Low / High</div>
-        		<div class="data"></div>
-        		<div class="head">Precipitation</div>
-        		<div class="data"></div>
-        		<div class="head">Humidity</div>
-        		<div class="data"></div>
-        		<div class="head">Wind</div>
-        		<div class="data"></div>
-        	</div>
-        	<div class="col-md-4" id="rightside">
-        		<div class="head"></div>
-        		<div id="daySummary" class="data sum"></div>
-        		<div class="head"></div>
-        		<div id="temperature" class="data"></div>
-        		<div class="head"></div>
-        		<div id="apparent" class="data"></div>
-        		<div class="head"></div>
-        		<div id="highLow" class="data"></div>
-        		<div class="head"></div>
-        		<div id="precipitation" class="data"></div>
-        		<div class="head"></div>
-        		<div id="humidity" class="data"></div>
-        		<div class="head"></div>
-        		<div id="windSpeed" class="data"></div>
-        	</div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <div id="group6" class="parallax__group">
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title"></div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
-      </div>
-    </div>
-    <div id="group7" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title container" id="details">
-        <div class="row">
-        	<div id="summary">Weekly</div></br>
-        	<div class="col-md-4" id="leftside">
-        		<div class="head"></div>
-        		<div id="daySummaryY" class="data sum"></div>
-        		<div class="head"></div>
-        		<div id="temperatureY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="apparentY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="highLowY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="precipitationY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="humidityY" class="data"></div>
-        		<div class="head"></div>
-        		<div id="windSpeedY" class="data"></div>
-        	</div>
-        	<div class="col-md-4" id="midside">
-        		<div class="head">Daily</div>
-        		<div class="data sum"></div>
-        		<div class="head">Temperature</div>
-        		<div class="data"></div>
-        		<div class="head">Feels Like</div>
-        		<div class="data"></div>
-        		<div class="head">Low / High</div>
-        		<div class="data"></div>
-        		<div class="head">Precipitation</div>
-        		<div class="data"></div>
-        		<div class="head">Humidity</div>
-        		<div class="data"></div>
-        		<div class="head">Wind</div>
-        		<div class="data"></div>
-        	</div>
-        	<div class="col-md-4" id="rightside">
-        		<div class="head"></div>
-        		<div id="daySummary" class="data sum"></div>
-        		<div class="head"></div>
-        		<div id="temperature" class="data"></div>
-        		<div class="head"></div>
-        		<div id="apparent" class="data"></div>
-        		<div class="head"></div>
-        		<div id="highLow" class="data"></div>
-        		<div class="head"></div>
-        		<div id="precipitation" class="data"></div>
-        		<div class="head"></div>
-        		<div id="humidity" class="data"></div>
-        		<div class="head"></div>
-        		<div id="windSpeed" class="data"></div>
-        	</div>
-        </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 	<script src="./public/scripts/bootstrap.min.js"></script> 
 	<script src="./public/scripts/jquery-scrollto/lib/jquery-scrollto.js"></script>

@@ -43,9 +43,9 @@
 	    $data['current']['min_temp'] = $min_temp . "˚C";
 	    $data['current']['max_temp'] = $max_temp . "˚C";
 	    $data['current']['apparent'] = $apparent . "˚C";
-	    $data['current']['humidity'] = $humidity;
+	    $data['current']['humidity'] = (int)($humidity * 100);
 	    $data['current']['windSpeed'] = $windSpeed;
-	    $data['current']['precipitation_chance'] = $precipitation_chance;
+	    $data['current']['precipitation_chance'] = (int)($precipitation_chance * 100);
 	    $data['current']['precipitation_type'] = $precipitation_type;
 	    $data['current']['precipitation_intensity'] = $precipitation_intensity;
 	    $data['current']['icon'] = $icon;
@@ -76,9 +76,9 @@
 		    $data['yesterday']['min_temp'] = $min_temp . "˚C";
 		    $data['yesterday']['max_temp'] = $max_temp . "˚C";
 		    $data['yesterday']['apparent'] = $apparent . "˚C";
-		    $data['yesterday']['humidity'] = $humidity;
+		    $data['yesterday']['humidity'] = (int)($humidity * 100);
 		    $data['yesterday']['windSpeed'] = $windSpeed;
-		    $data['yesterday']['precipitation_chance'] = $precipitation_chance;
+		    $data['yesterday']['precipitation_chance'] = (int)($precipitation_chance * 100);
 		    $data['yesterday']['precipitation_type'] = $precipitation_type;
 		    $data['yesterday']['precipitation_intensity'] = $precipitation_intensity;
 		    $data['yesterday']['icon'] = $icon;

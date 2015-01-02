@@ -100,9 +100,9 @@ body {
   z-index: 3;
   /* slide under groups 1 and 3 */ }
 
-#group2 .parallax__layer--back {
-  background-image: url("./images/dormant.jpg");
-  background-position: center; }
+#group2 #imageswap {
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
 
 #group3 {
   z-index: 4;
@@ -110,36 +110,6 @@ body {
 
 #group3 .parallax__layer--base {
   background: #73DAD6; }
-
-#group4 {
-  z-index: 2;
-  /* slide under group 3 and 5 */ }
-
-#group4 .parallax__layer--back {
-  background-image: url("./images/nicer.jpg");
-  background-position: center; }
-
-#group5 {
-  z-index: 3;
-  /* slide over group 4 and 6 */ }
-
-#group5 .parallax__layer--base {
-  background: #EE5454; }
-
-#group6 {
-  z-index: 2;
-  /* slide under group 5 and 7 */ }
-
-#group6 .parallax__layer--back {
-  background-image: url("./images/2048.jpg");
-  background-position: center; }
-
-#group7 {
-  z-index: 3;
-  /* slide over group 7 */ }
-
-#group7 .parallax__layer--base {
-  background: #81FA7D; }
 
 /* Search Page */
 #location {
@@ -171,12 +141,11 @@ body {
   height: 80vh;
   margin-top: 50px; }
   #details .data {
-    border-top: 1px solid #3D3D3D;
-    height: 50px; }
+    height: 100px;
+    font-size: 14px;
+    border-top: 1px solid #3D3D3D; }
   #details .head {
-    border-bottom: 1px solid #3D3D3D;
-    bottom: 0;
-    height: 50px; }
+    font-size: 18px; }
   #details #rightside {
     padding-left: 0; }
   #details #midside {
@@ -185,7 +154,20 @@ body {
   #details #leftside {
     padding-right: 0; }
   #details .sum {
-    height: 80px;
+    height: 120px;
     overflow: scroll; }
+  #details .mid {
+    height: 50px;
+    border: none; }
+  #details #topheadY {
+    font-size: 20px;
+    height: 50px;
+    bottom: 0;
+    border: none; }
+  #details #tophead {
+    font-size: 20px;
+    height: 50px;
+    bottom: 0;
+    border: none; }
 
 /*# sourceMappingURL=output.css.map */
