@@ -30,7 +30,7 @@
 	    $max_temp = (int)($current_condition->getMaxTemperature());
 	    $summary = $current_condition->getDailySummary();
 	    $week_summary = $current_condition->getWeeklySummary();
-	    $apparent = $current_condition->getApparentTemperature();
+	    $apparent = (int)($current_condition->getApparentTemperature());
 	    $humidity = $current_condition->getHumidity();
 	    $windSpeed = $current_condition->getWindSpeed();
 	    $precipitation_chance = $current_condition->getPrecipitationProbability();
@@ -63,7 +63,7 @@
 		    $max_temp = (int)($yesterday_condition->getMaxTemperature());
 		    $summary = $yesterday_condition->getDailySummary();
 		    $week_summary = $yesterday_condition->getWeeklySummary();
-		    $apparent = $yesterday_condition->getApparentTemperature();
+		    $apparent = (int)($yesterday_condition->getApparentTemperature());
 		    $humidity = $yesterday_condition->getHumidity();
 		    $windspeed = $yesterday_condition->getWindSpeed();
 		    $precipitation_chance = $yesterday_condition->getPrecipitationProbability();

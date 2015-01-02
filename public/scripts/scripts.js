@@ -16,6 +16,8 @@ $(function() {
 			dataType: 'json',
 			encode: true
 		}).done(function(data) {
+			$('#go-down').css("display", "inline");
+			$('#go-down').empty().append(loader_img);
 			var icon = data['current']['icon'];
 			var icon_img_map = {
 				'clear-night': "./public/icons/clear-night.jpg",
@@ -35,7 +37,9 @@ $(function() {
 			img.onload = function() {
 				$('#group2').css("display", "block");
 				$('#group3').css("display", "block");
-				$('#go-down').css("display", "inline");
+				$('#go-down').empty().append('<button type="button" class="btn btn-default btn-lg">' + 
+												'<span class="glyphicon glyphicon-chevron-down"></span>' +
+												'</button>');
 				$('#imageswap').css("background-image", 'url("' + icon_img + '")');
 			}
 			img.src = icon_img;

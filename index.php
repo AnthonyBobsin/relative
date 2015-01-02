@@ -57,9 +57,6 @@
 				</p>
 				</form>
 				<div id="go-down">
-				    <button type="button" class="btn btn-default btn-lg">
-						<span class="glyphicon glyphicon-chevron-down"></span>
-					</button>
 				</div>
 			</div>
 		 	
