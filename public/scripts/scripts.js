@@ -32,8 +32,7 @@ $(function() {
 				'clear-day': "./public/icons/clear-day.jpg" 
 			};
 			var icon_img = icon_img_map[icon] || icon_img_map['default'];
-			var img = new Image();
-			img.src = icon_img;
+			new Image().src = icon_img;
 
 			$('#imageswap').css("background-image", 'url("' + icon_img + '")');
 
