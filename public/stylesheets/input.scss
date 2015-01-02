@@ -1,3 +1,6 @@
+
+@import "chartist.scss";
+
 /* variables */
 
 $gray-white: #DBDADA;
@@ -138,7 +141,7 @@ body {
     z-index: 4; /* slide over group 2 and 4 */
 }
 #group3 .parallax__layer--base {
-    background: #73DAD6;
+    background: white;
 }
 
 
@@ -179,48 +182,10 @@ body {
 	overflow: scroll;
 	height: 80vh;
 	margin-top: 50px;
-	.data {
-		height: 100px;
-		font-size: 14px;
-		border-top: 1px solid $darker-gray;
-	}
-	.head {
-		font-size: 18px;
-	}
-	#rightside {
-		padding-left: 0;
-	}
-	#midside {
-		padding-left : 0;
-		padding-right: 0;
-	}
-	#leftside {
-		padding-right:0;
-	}
-	.sum {
-		height: 120px;
-		overflow:scroll;
-	}
-	.mid {
-		height: 50px;
-		border: none;
-	}
-	#topheadY {
-		font-size: 20px;
-		height: 50px;
-		bottom: 0;
-		border: none;
-	}
-	#tophead {
-		font-size: 20px;
-		height: 50px;
-		bottom: 0;
-		border: none;
+	.hovertest {
+		cursor: default;
+		&:hover {
+			color: #02A5D6;
+		}
 	}
 }
-  
-
-
-
-
-

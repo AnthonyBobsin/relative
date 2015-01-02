@@ -39,10 +39,10 @@
 	    $icon = $current_condition->getIcon();
 
 	    $data['current']['summary'] = $summary;
-	    $data['current']['temperature'] = $current_temp . "˚C";
-	    $data['current']['min_temp'] = $min_temp . "˚C";
-	    $data['current']['max_temp'] = $max_temp . "˚C";
-	    $data['current']['apparent'] = $apparent . "˚C";
+	    $data['current']['temperature'] = $current_temp/* . "˚C"*/;
+	    $data['current']['min_temp'] = $min_temp/* . "˚C"*/;
+	    $data['current']['max_temp'] = $max_temp/* . "˚C"*/;
+	    $data['current']['apparent'] = $apparent/* . "˚C"*/;
 	    $data['current']['humidity'] = (int)($humidity * 100);
 	    $data['current']['windSpeed'] = $windSpeed;
 	    $data['current']['precipitation_chance'] = (int)($precipitation_chance * 100);
@@ -72,10 +72,10 @@
 		    $icon = $yesterday_condition->getIcon();
 
 		    $data['yesterday']['summary'] = $summary;
-		    $data['yesterday']['temperature'] = $current_temp . "˚C";
-		    $data['yesterday']['min_temp'] = $min_temp . "˚C";
-		    $data['yesterday']['max_temp'] = $max_temp . "˚C";
-		    $data['yesterday']['apparent'] = $apparent . "˚C";
+		    $data['yesterday']['temperature'] = $current_temp/* . "˚C"*/;
+		    $data['yesterday']['min_temp'] = $min_temp/* . "˚C"*/;
+		    $data['yesterday']['max_temp'] = $max_temp/* . "˚C"*/;
+		    $data['yesterday']['apparent'] = $apparent/* . "˚C"*/;
 		    $data['yesterday']['humidity'] = (int)($humidity * 100);
 		    $data['yesterday']['windSpeed'] = $windSpeed;
 		    $data['yesterday']['precipitation_chance'] = (int)($precipitation_chance * 100);

@@ -1,0 +1,24 @@
+{
+  "name": "relative",
+  "version": "1.0.0",
+  "homepage": "https://github.com/AnthonyBobsin/relative",
+  "authors": [
+    "AnthonyBobsin <bobsinj@gmail.com>"
+  ],
+  "description": "Displays data relative to day before.",
+  "main": "index.php",
+  "keywords": [
+    "Weather"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chartist": "~0.5.0"
+  }
+}

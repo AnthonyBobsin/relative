@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css" />
+    <script src="./bower_components/chartist/dist/chartist.min.js"></script>
     <link rel="stylesheet" href="./public/stylesheets/output.css" />
     <script src="./public/scripts/jquery.min.js"></script><!-- Switch to google for production -->
     <script src="./public/scripts/scripts.js"></script>
@@ -74,36 +75,16 @@
       <div class="parallax__layer parallax__layer--base">
         <div class="title container" id="details">
         <div class="row">
-        	<div id="summary">Weekly</div></br>
-        	<div class="col-md-4" id="leftside">
-        		<div id="topheadY" class="data"></div>
-        		<div id="daySummaryY" class="data sum "></div>
-        		<div id="temperatureY" class="data"></div>
-        		<div id="apparentY" class="data"></div>
-        		<div id="highLowY" class="data"></div>
-        		<div id="precipitationY" class="data"></div>
-        		<div id="humidityY" class="data"></div>
-        		<div id="windSpeedY" class="data"></div>
+        	<div class="col-md-4">
+        		<div><p class="hovertest" id="temp">Temperature</p></div>
+        		<div><p class="hovertest" id="app">Feels Like</p></div>
+        		<div><p class="hovertest" id="lo">Low </p><p class="hovertest" id="hi"> High</p></div>
+        		<div><p class="hovertest" id="precip">Precipitation</p></div>
+        		<div><p class="hovertest" id="humid">Humidity</p></div>
+        		<div><p class="hovertest" id="wind">Wind Speed</p></div>
         	</div>
-        	<div class="col-md-4" id="midside">
-        		<div class="data head mid"></div>
-        		<div class="data sum head"><p>Daily</p></div>
-        		<div class="data head"><p>Temperature</p></div>
-        		<div class="data head"><p>Feels Like</p></div>
-        		<div class="data head"><p>Low / High</p></div>
-        		<div class="data head"><p>Precipitation</p></div>
-        		<div class="data head"><p>Humidity</p></div>
-        		<div class="data head"><p>Wind</p></div>
-        	</div>
-        	<div class="col-md-4" id="rightside">
-        		<div id="tophead" class="data"></div>
-        		<div id="daySummary" class="data sum"></div>
-        		<div id="temperature" class="data"></div>
-        		<div id="apparent" class="data"></div>
-        		<div id="highLow" class="data"></div>
-        		<div id="precipitation" class="data"></div>
-        		<div id="humidity" class="data"></div>
-        		<div id="windSpeed" class="data"></div>
+        	<div class="col-md-8">
+        		<div class="ct-chart ct-perfect-fourth"></div>
         	</div>
         </div>
         </div>
