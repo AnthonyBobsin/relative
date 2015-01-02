@@ -1,16 +1,5 @@
 $(function() {
 
-	var cache = [];
-	// Arguments are image paths relative to the current page.
-	$.preLoadImages = function() {
-	  var args_len = arguments.length;
-	  for (var i = args_len; i--;) {
-	    var cacheImage = document.createElement('img');
-	    cacheImage.src = arguments[i];
-	    cache.push(cacheImage);
-	  }
-	}
-
 	$('form').submit(function(event) {
 		var location = {
 			'location' : $('#location').val()
@@ -27,8 +16,6 @@ $(function() {
 			dataType: 'json',
 			encode: true
 		}).done(function(data) {
-			$('#group2').css("display", "block");
-			$('#group3').css("display", "block");
 			var icon = data['current']['icon'];
 			var icon_img_map = {
 				'clear-night': "./public/icons/clear-night.jpg",
@@ -43,9 +30,17 @@ $(function() {
 				'clear-day': "./public/icons/clear-day.jpg" 
 			};
 			var icon_img = icon_img_map[icon] || icon_img_map['default'];
-			jQuery.preLoadImages(icon_img);
 
-			$('#imageswap').css("background-image", 'url("' + icon_img + '")');
+			var img = new Image();
+			img.onload = function() {
+				$('#group2').css("display", "block");
+				$('#group3').css("display", "block");
+				$('#go-down').css("display", "inline");
+				$('#imageswap').css("background-image", 'url("' + icon_img + '")');
+			}
+			img.src = icon_img;
+
+			if (img.complete) img.onload();
 
 			$('#switcharoo').empty().append('<span class="result-left">Yesterday:</span><span class="result-right">'
 													+ data['yesterday']['temperature'] + 
@@ -70,7 +65,6 @@ $(function() {
 			$('#windSpeedY').empty().append('<p>' + data['yesterday']['windSpeed'] + 'mph</p>');
 			$('#windSpeed').empty().append('<p>' + data['current']['windSpeed'] + 'mph</p>');
 
-			$('#go-down').css("display", "inline");
 
 		});
 		event.preventDefault();
