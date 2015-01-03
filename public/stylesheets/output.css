@@ -549,6 +549,8 @@ body {
     border-bottom: 1px solid #333333; }
   #details .hovertest {
     cursor: default; }
+  #details .hoversum {
+    cursor: default; }
   #details #lefter {
     float: left;
     position: absolute;
