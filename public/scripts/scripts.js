@@ -40,9 +40,9 @@ $(function() {
 		current = data['current']['temperature'];
 		$('#switcharoo').empty().append('<span class="result-left">Yesterday:</span><span class="result-right">'
 												+ yesterday + 
-											'</span></br><span class="result-left">Current:</span><span class="result-right">'
+											'˚C</span></br><span class="result-left">Current:</span><span class="result-right">'
 												+ current + 
-											'</span></br>');
+											'˚C</span></br>');
 		if (yesterday === 'Format Error') {
 			$('#go-down').empty().append('<p>Issue might be too many geocode requests.</p>');
 		}
@@ -61,40 +61,67 @@ $(function() {
 		new Chartist.Bar('.ct-chart', graphData);
 	}
 
+	reset_sums = function(exclude) {
+		$('.hoversum').css("color", "#333333");
+		$(exclude).css("color", "#02A5D6");
+	}
+	reset_others = function(exclude) {
+		$('.hovertest').css("color", "#333333");
+		$(exclude).css("color", "#02A5D6");
+	}
+	$('#weeksum').hover(function() {
+		$('#sumresult').empty().append(currentData['summary']);
+		reset_sums('#weeksum');
+	});
+	$('#yessum').hover(function() {
+		$('#sumresult').empty().append(currentData['yesterday']['summary']);
+		reset_sums('#yessum');
+	});
+	$('#currentsum').hover(function() {
+		$('#sumresult').empty().append(currentData['current']['summary']);
+		reset_sums('#currentsum');
+	});
 	$('#temp').hover(function() {
 		yesterday = currentData['yesterday']['temperature'];
 		current = currentData['current']['temperature'];
 		init_table();
+		reset_others('#temp');
 	});
 	$('#app').hover(function() {
 		yesterday = currentData['yesterday']['apparent'];
 		current = currentData['current']['apparent'];
 		init_table();
+		reset_others('#app');
 	});
 	$('#lo').hover(function() {
 		yesterday = currentData['yesterday']['min_temp'];
 		current = currentData['current']['min_temp'];
 		init_table();
+		reset_others('#lo');
 	});
 	$('#hi').hover(function() {
 		yesterday = currentData['yesterday']['max_temp'];
 		current = currentData['current']['max_temp'];
 		init_table();
+		reset_others('#hi');
 	});
 	$('#precip').hover(function() {
 		yesterday = currentData['yesterday']['precipitation_chance'];
 		current = currentData['current']['precipitation_chance'];
 		init_table();
+		reset_others('#precip');
 	});
 	$('#humid').hover(function() {
 		yesterday = currentData['yesterday']['humidity'];
 		current = currentData['current']['humidity'];
 		init_table();
+		reset_others('#humid');
 	});
 	$('#wind').hover(function() {
 		yesterday = currentData['yesterday']['windSpeed'];
 		current = currentData['current']['windSpeed'];
 		init_table();
+		reset_others('#wind');
 	});
 
 
@@ -122,6 +149,10 @@ $(function() {
 	$('#go-down').on('click', function(event) {
 		event.preventDefault();
 		$('#group3').ScrollTo();
+	});
+	$('#go-up').on('click', function(event) {
+		event.preventDefault();
+		$('#group1').ScrollTo();
 	});
 
 	$('#go-down').css("display", "none");

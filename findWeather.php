@@ -15,7 +15,7 @@
 	
 	$Address = urlencode($_POST['location']);
 	//Use geocode to get latitude/longitude from input location
-	$request_url = "http://maps.googleapis.com/maps/api/geocode/xml?address=".$Address."&sensor=true";
+	$request_url = "https://maps.googleapis.com/maps/api/geocode/xml?key=AIzaSyD7n4UdliKbLCTfpZ6D-mwERJqs8Ro-2Gw&address=".$Address."&sensor=true";
 	$xml = simplexml_load_file($request_url) or die("url not loading");
 	$status = $xml->status;
 	if ($status=="OK") {

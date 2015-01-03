@@ -536,13 +536,23 @@ body {
   right: 0; }
 
 /* Details Page */
+#go-up {
+  text-align: center;
+  margin-top: 75px; }
+
 #details {
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow-y: auto;
   height: 80vh;
-  margin-top: 50px; }
+  margin-top: 100px; }
+  #details .heads {
+    border-bottom: 1px solid #333333; }
   #details .hovertest {
     cursor: default; }
-    #details .hovertest:hover {
-      color: #02A5D6; }
+  #details #lefter {
+    float: left;
+    position: absolute;
+    display: block;
+    margin-top: 340px; }
 
 /*# sourceMappingURL=output.css.map */

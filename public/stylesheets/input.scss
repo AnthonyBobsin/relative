@@ -178,14 +178,26 @@ body {
 
 /* Details Page */
 
+#go-up {
+	text-align: center;
+	margin-top: 75px;
+}
+
 #details {
-	overflow: scroll;
+	/* overflow: scroll; */
+	overflow-y: auto;
 	height: 80vh;
-	margin-top: 50px;
+	margin-top: 100px;
+	.heads {
+		border-bottom: 1px solid #333333;
+	}
 	.hovertest {
 		cursor: default;
-		&:hover {
-			color: #02A5D6;
-		}
+	}
+	#lefter {
+		float: left;
+		position: absolute;
+		display: block;
+		margin-top: 340px;
 	}
 }
