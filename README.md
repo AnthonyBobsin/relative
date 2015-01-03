@@ -9,4 +9,3 @@ The temperature is retrieved from forecast.io.
 
 heroku address: https://murmuring-basin-7340.herokuapp.com/
 
-In progress: Make graph more legible. Add units to graph. Include weekly and daily summaries.
