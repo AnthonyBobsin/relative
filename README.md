@@ -7,5 +7,5 @@ The picture displayed during scroll is chosen based off of current weather.
 
 The temperature is retrieved from forecast.io.
 
-heroku address: https://murmuring-basin-7340.herokuapp.com/
+heroku address: https://relativeweather.herokuapp.com/
 
