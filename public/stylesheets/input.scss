@@ -37,12 +37,6 @@ body {
 	.navbar-brand {
 		text-transform: uppercase;
 	}
-	.dropdown-menu {
-		background-color: rgba(1, 1, 1, 0.8);
-		a:hover {
-			background-color: inherit;
-		}
-	}
 	li a {
 		color: $dark-gray;
 	}
@@ -203,4 +197,21 @@ body {
 		display: block;
 		margin-top: 340px;
 	}
+}
+
+/* About and Contact Page */
+
+.conbout {
+    margin-top: 100px;
+    h1 {
+        padding-bottom: 20px;
+    }
+    h1, h5 {
+        text-align: center;
+    }
+    p {
+        line-height: 2;
+        font-size: 1.4em;
+        letter-spacing: 1.4px;
+    }
 }

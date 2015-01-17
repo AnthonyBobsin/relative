@@ -423,10 +423,6 @@ body {
   border-radius: 0; }
   .navbar .navbar-brand {
     text-transform: uppercase; }
-  .navbar .dropdown-menu {
-    background-color: rgba(1, 1, 1, 0.8); }
-    .navbar .dropdown-menu a:hover {
-      background-color: inherit; }
   .navbar li a {
     color: #8D8A8A; }
 
@@ -556,5 +552,17 @@ body {
     position: absolute;
     display: block;
     margin-top: 340px; }
+
+/* About and Contact Page */
+.conbout {
+  margin-top: 100px; }
+  .conbout h1 {
+    padding-bottom: 20px; }
+  .conbout h1, .conbout h5 {
+    text-align: center; }
+  .conbout p {
+    line-height: 2;
+    font-size: 1.4em;
+    letter-spacing: 1.4px; }
 
 /*# sourceMappingURL=output.css.map */
