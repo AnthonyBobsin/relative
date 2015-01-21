@@ -137,7 +137,8 @@ $(function() {
 	});
 
 
-	$('form').submit(function(event) {
+	$('form').submit(function(event) {	
+		event.preventDefault();
 		var location = {
 			'location' : $('#location').val()
 		};
@@ -155,7 +156,6 @@ $(function() {
 		}).done(function(data) {
 			init(data);
 		});
-		event.preventDefault();
 	});
 
 	$('#go-down').on('click', function(event) {
