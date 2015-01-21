@@ -64,6 +64,7 @@
                             </div>
                     	</div>
                     	<div class="col-md-3 nopad" id="lefter">
+                            <canvas id="icon1" width="128" height="128"></canvas>
                     		<div><p id="sumresult"></p></div>
                     	</div>
                     	<div class="col-md-5">
