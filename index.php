@@ -37,28 +37,39 @@
     			</button>
     		</div>
             <div class="title container" id="details">
-                <div class="row">
-                	<div class="col-md-2 nopad">
-                		<div class="heads"><p>Summary</p></div>
-                		<div><p class="hoversum" id="weeksum">This Week</p></div>
-                		<div><p class="hoversum" id="yessum">Yesterday</p></div>
-                		<div><p class="hoversum" id="currentsum">Today</p></div>
-                	</div>
-                	<div class="col-md-2 nopad">
-                		<div class="heads"><p>Data</p></div>
-                		<div><p class="hovertest" id="temp">Temperature</p></div>
-                		<div><p class="hovertest" id="app">Feels Like</p></div>
-                		<div><p class="hovertest" id="lo">Low </p><p class="hovertest" id="hi"> High</p></div>
-                		<div><p class="hovertest" id="precip">Precipitation</p></div>
-                		<div><p class="hovertest" id="humid">Humidity</p></div>
-                		<div><p class="hovertest" id="wind">Wind Speed</p></div>
-                	</div>
-                	<div class="col-md-4 nopad" id="lefter">
-                		<div><p id="sumresult"></p></div>
-                	</div>
-                	<div class="col-md-8">
-                		<div class="ct-chart ct-perfect-fourth"></div>
-                	</div>
+                <div class="row" id="resulthead">
+                    <div class="col-md-8 col-md-offset-2 ">
+                        <div><p id="locationresult"></p></div>
+                        <div><p id="weeksum"></p></div>
+                    </div>
+                </div>
+                <div class="gimmespace">
+                    <div class="row">
+                    	<div class="col-md-2 nopad">
+                    		<div class="heads"><p>Summary</p></div>
+                            <div class="gimmespace">
+                            	<div><p class="hoversum" id="yessum">Yesterday</p></div>
+                            	<div><p class="hoversum" id="currentsum">Today</p></div>
+                            </div>
+                    	</div>
+                    	<div class="col-md-2 nopad">
+                    		<div class="heads"><p>Data</p></div>
+                            <div class="gimmespace">
+                            	<div><p class="hovertest" id="temp">Temperature</p></div>
+                            	<div><p class="hovertest" id="app">Feels Like</p></div>
+                            	<div><p class="hovertest" id="lo">Low </p><p class="hovertest" id="hi"> High</p></div>
+                            	<div><p class="hovertest" id="precip">Precipitation</p></div>
+                            	<div><p class="hovertest" id="humid">Humidity</p></div>
+                            	<div><p class="hovertest" id="wind">Wind Speed</p></div>
+                            </div>
+                    	</div>
+                    	<div class="col-md-3 nopad" id="lefter">
+                    		<div><p id="sumresult"></p></div>
+                    	</div>
+                    	<div class="col-md-5">
+                    		<div class="ct-chart ct-bobsin"></div>
+                    	</div>
+                    </div>
                 </div>
             </div>
         </div>

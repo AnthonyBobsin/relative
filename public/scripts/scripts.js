@@ -47,6 +47,9 @@ $(function() {
 			$('#go-down').empty().append('<p>Issue might be too many geocode requests.</p>');
 		}
 
+		$('#locationresult').empty().append(data['location']);
+		$('#weeksum').empty().append(data['summary']);
+
 		init_table();
 	}
 
@@ -69,10 +72,6 @@ $(function() {
 		$('.hovertest').css("color", "#333333");
 		$(exclude).css("color", "#02A5D6");
 	}
-	$('#weeksum').hover(function() {
-		$('#sumresult').empty().append(currentData['summary']);
-		reset_sums('#weeksum');
-	});
 	$('#yessum').hover(function() {
 		$('#sumresult').empty().append(currentData['yesterday']['summary']);
 		reset_sums('#yessum');

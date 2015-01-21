@@ -1,5 +1,4 @@
 <?php
-
 	require_once 'forecast.io.php';
 
 	$api_key = '94554c8a6559d0c2c5cd86c818780f32';
@@ -23,8 +22,5 @@
 			$condition = $forecast->getCurrentConditions($latitude, $longitude, $units, $lang);
 			return $condition->getTemperature();
 		}
-
-
 	}
-
 ?>

@@ -178,25 +178,32 @@ body {
 }
 
 #details {
-	/* overflow: scroll; */
-	overflow-y: auto;
+	/* overflow: scroll; 
+	overflow-y: auto;*/
 	height: 80vh;
 	margin-top: 100px;
+    #resulthead {
+        border-bottom: 1px solid $gray-white;
+    }
+    .gimmespace {
+        margin-top: 5vh;
+    }
 	.heads {
-		border-bottom: 1px solid #333333;
 	}
 	.hovertest {
 		cursor: default;
+        font-size: 0.5em;
 	}
 	.hoversum {
 		cursor: default;
+        font-size: 0.5em;
 	}
-	#lefter {
+	/*#lefter {
 		float: left;
 		position: absolute;
 		display: block;
-		margin-top: 340px;
-	}
+		margin-top: px;
+	}*/
 }
 
 /* About and Contact Page */

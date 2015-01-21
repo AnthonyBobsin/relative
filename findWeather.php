@@ -12,8 +12,9 @@
 	$current_hour = date('G', $current);
 	$forecast = new ForecastIO($api_key);
 	$data = array();
+	$location = $_POST['location'];
 	
-	$Address = urlencode($_POST['location']);
+	$Address = urlencode($location);
 	//Use geocode to get latitude/longitude from input location
 	$request_url = "https://maps.googleapis.com/maps/api/geocode/xml?key=AIzaSyD7n4UdliKbLCTfpZ6D-mwERJqs8Ro-2Gw&address=".$Address."&sensor=true";
 	$xml = simplexml_load_file($request_url) or die("url not loading");
@@ -51,6 +52,7 @@
 	    $data['current']['icon'] = $icon;
 
 	    $data['summary'] = $week_summary;
+	    $data['location'] = $location;
 
 		//Get conditions for yesterday and values
 		$yesterday_condition = $forecast->getPreviousConditions($Lat, $Lon, $units, $lang, $yesterday);

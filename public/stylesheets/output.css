@@ -37,7 +37,7 @@
   fill-opacity: 0.1; }
 .ct-chart .ct-bar {
   fill: none;
-  stroke-width: 100px; }
+  stroke-width: 20px; }
 .ct-chart .ct-slice.ct-donut {
   fill: none;
   stroke-width: 60px; }
@@ -397,6 +397,26 @@
     position: absolute;
     top: 0;
     left: 0; }
+.ct-chart.ct-bobsin {
+  display: block;
+  position: relative;
+  width: 100%; }
+  .ct-chart.ct-bobsin:before {
+    display: block;
+    float: left;
+    content: "";
+    width: 0;
+    height: 0;
+    padding-bottom: 80%; }
+  .ct-chart.ct-bobsin:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .ct-chart.ct-bobsin > svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 /* variables */
 /* universal */
@@ -537,21 +557,26 @@ body {
   margin-top: 75px; }
 
 #details {
-  /* overflow: scroll; */
-  overflow-y: auto;
+  /* overflow: scroll; 
+  overflow-y: auto;*/
   height: 80vh;
-  margin-top: 100px; }
-  #details .heads {
-    border-bottom: 1px solid #333333; }
+  margin-top: 100px;
+  /*#lefter {
+  	float: left;
+  	position: absolute;
+  	display: block;
+  	margin-top: px;
+  }*/ }
+  #details #resulthead {
+    border-bottom: 1px solid #DBDADA; }
+  #details .gimmespace {
+    margin-top: 5vh; }
   #details .hovertest {
-    cursor: default; }
+    cursor: default;
+    font-size: 0.5em; }
   #details .hoversum {
-    cursor: default; }
-  #details #lefter {
-    float: left;
-    position: absolute;
-    display: block;
-    margin-top: 340px; }
+    cursor: default;
+    font-size: 0.5em; }
 
 /* About and Contact Page */
 .conbout {
