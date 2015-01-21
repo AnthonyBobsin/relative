@@ -5,6 +5,8 @@ $(function() {
 	var currentData;
 	var loader_img = '<img src="./public/stylesheets/images/ajax-loader.gif"/>';
 
+	var skycons = new Skycons({"color": "#02A5D6"});
+
 	init = function(data) {
 		currentData = data;
 		$('#go-down').css("display", "inline");
@@ -38,6 +40,8 @@ $(function() {
 
 		yesterday = data['yesterday']['temperature'];
 		current = data['current']['temperature'];
+		init_table();
+		reset_others('#temp');
 		$('#switcharoo').empty().append('<span class="result-left">Yesterday:</span><span class="result-right">'
 												+ yesterday + 
 											'˚C</span></br><span class="result-left">Current:</span><span class="result-right">'
@@ -50,7 +54,12 @@ $(function() {
 		$('#locationresult').empty().append(data['location']);
 		$('#weeksum').empty().append(data['summary']);
 
-		init_table();
+		$('#sumresult').empty().append(data['current']['summary']);
+		reset_sums('#currentsum');
+
+		skycons.add('icon1', data['current']['icon']);
+		skycons.play();
+
 	}
 
 	init_table = function() {
@@ -75,10 +84,14 @@ $(function() {
 	$('#yessum').hover(function() {
 		$('#sumresult').empty().append(currentData['yesterday']['summary']);
 		reset_sums('#yessum');
+		skycons.set('icon1', data['current']['icon']);
+		skycons.play();
 	});
 	$('#currentsum').hover(function() {
 		$('#sumresult').empty().append(currentData['current']['summary']);
 		reset_sums('#currentsum');
+		skycons.set('icon1', data['current']['icon']);
+		skycons.play();
 	});
 	$('#temp').hover(function() {
 		yesterday = currentData['yesterday']['temperature'];
@@ -157,5 +170,6 @@ $(function() {
 	$('#go-down').css("display", "none");
 	$('#group2').css("display", "none");
 	$('#group3').css("display", "none");
+
 
 });

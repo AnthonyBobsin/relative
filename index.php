@@ -9,7 +9,7 @@
 			    <form action="findWeather.php" method="POST">
 		    	<p>
 				    <label for="location" id="labels">Location</label><br/>
-				    <input type="text" name="location" class="form-control" id="location"/>
+				    <input type="text" name="location" class="form-control" id="location" autofocus/>
 				</p>
 
 				<p id="switcharoo">
@@ -55,12 +55,13 @@
                     	<div class="col-md-2 nopad">
                     		<div class="heads"><p>Data</p></div>
                             <div class="gimmespace">
-                            	<div><p class="hovertest" id="temp">Temperature</p></div>
-                            	<div><p class="hovertest" id="app">Feels Like</p></div>
-                            	<div><p class="hovertest" id="lo">Low </p><p class="hovertest" id="hi"> High</p></div>
-                            	<div><p class="hovertest" id="precip">Precipitation</p></div>
-                            	<div><p class="hovertest" id="humid">Humidity</p></div>
-                            	<div><p class="hovertest" id="wind">Wind Speed</p></div>
+                            	<div><p class="hovertest" id="temp">Temperature (˚C)</p></div>
+                            	<div><p class="hovertest" id="app">Feels Like (˚C)</p></div>
+                            	<div><p class="hovertest" id="lo">Low (˚C)</p></div>
+                                <div><p class="hovertest" id="hi">High (˚C)</p></div>
+                            	<div><p class="hovertest" id="precip">Precipitation Chance (%)</p></div>
+                            	<div><p class="hovertest" id="humid">Humidity (%)</p></div>
+                            	<div><p class="hovertest" id="wind">Wind Speed (mph)</p></div>
                             </div>
                     	</div>
                     	<div class="col-md-3 nopad" id="lefter">

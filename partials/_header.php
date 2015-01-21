@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css" />
     <script src="./bower_components/chartist/dist/chartist.min.js"></script>
     <link rel="stylesheet" href="./public/stylesheets/output.css" />
-    <script src="./public/scripts/jquery.min.js"></script><!-- Switch to google for production -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="./public/scripts/scripts.js"></script>
   <title>Relative</title>
 </head>

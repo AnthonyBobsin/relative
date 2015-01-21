@@ -16,12 +16,13 @@
 	
 	$Address = urlencode($location);
 	//Use geocode to get latitude/longitude from input location
-	$request_url = "https://maps.googleapis.com/maps/api/geocode/xml?key=AIzaSyD7n4UdliKbLCTfpZ6D-mwERJqs8Ro-2Gw&address=".$Address."&sensor=true";
-	$xml = simplexml_load_file($request_url) or die("url not loading");
-	$status = $xml->status;
+	$request_url = "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyD7n4UdliKbLCTfpZ6D-mwERJqs8Ro-2Gw&address=".$Address."&sensor=true";
+	$json = json_decode(file_get_contents($request_url), true);
+	$status = $json['status'];
 	if ($status=="OK") {
-	    $Lat = $xml->result->geometry->location->lat;
-	    $Lon = $xml->result->geometry->location->lng;
+	    $Lat = $json['results'][0]['geometry']['location']['lat'];
+	    $Lon = $json['results'][0]['geometry']['location']['lng'];
+	    $location = $json['results'][0]['formatted_address'];
 	    //Get current conditions and values
 	    $current_condition = $forecast->getCurrentConditions($Lat, $Lon, $units, $lang);
 	    $timezone = $current_condition->getTimezone();

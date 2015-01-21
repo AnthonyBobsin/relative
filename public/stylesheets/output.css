@@ -570,13 +570,13 @@ body {
   #details #resulthead {
     border-bottom: 1px solid #DBDADA; }
   #details .gimmespace {
-    margin-top: 5vh; }
+    margin-top: 4vh; }
   #details .hovertest {
     cursor: default;
-    font-size: 0.5em; }
+    font-size: 0.7em; }
   #details .hoversum {
     cursor: default;
-    font-size: 0.5em; }
+    font-size: 0.7em; }
 
 /* About and Contact Page */
 .conbout {
