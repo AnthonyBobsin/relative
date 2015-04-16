@@ -7,11 +7,13 @@ $(function() {
 
 	var skycons = new Skycons({"color": "#02A5D6"});
 
+	//Gets called after API request to set results page
 	init = function(data) {
 		currentData = data;
 		$('#go-down').css("display", "inline");
 		$('#go-down').empty().append(loader_img);
 		var icon = data['current']['icon'];
+		//All the possible images to load depending on the weather
 		var icon_img_map = {
 			'clear-night': "./public/icons/clear-night.jpg",
 			'partly-cloudy-day': "./public/icons/partly-cloudy-day.jpg",
@@ -24,9 +26,11 @@ $(function() {
 			'fog': "./public/icons/fog.jpg",
 			'clear-day': "./public/icons/clear-day.jpg" 
 		};
+		//if icon is not present then assign default image
 		var icon_img = icon_img_map[icon] || icon_img_map['default'];
 
 		var img = new Image();
+		//Wait until the image loads to show image page, results page and scroll down button
 		img.onload = function() {
 			$('#group2').css("display", "block");
 			$('#group3').css("display", "block");
@@ -40,8 +44,9 @@ $(function() {
 
 		yesterday = data['yesterday']['temperature'];
 		current = data['current']['temperature'];
-		init_table();
+
 		reset_others('#temp');
+		//Display current and yesterday temperature where 'Get Weather' button was
 		$('#switcharoo').empty().append('<span class="result-left">Yesterday:</span><span class="result-right">'
 												+ yesterday + 
 											'˚C</span></br><span class="result-left">Current:</span><span class="result-right">'
@@ -60,8 +65,12 @@ $(function() {
 		skycons.add('icon1', data['current']['icon']);
 		skycons.play();
 
+		$('#chartpath').empty().append('<div class="ct-chart ct-bobsin"></div>');
+		init_table();
+
 	}
 
+	//Initiates graph on results page
 	init_table = function() {
 		var graphData = {
 			labels: ['Yesterday', 'Currently'],
@@ -73,6 +82,7 @@ $(function() {
 		new Chartist.Bar('.ct-chart', graphData);
 	}
 
+	//Reset colours of all elements not current hovering
 	reset_sums = function(exclude) {
 		$('.hoversum').css("color", "#333333");
 		$(exclude).css("color", "#02A5D6");
@@ -81,6 +91,7 @@ $(function() {
 		$('.hovertest').css("color", "#333333");
 		$(exclude).css("color", "#02A5D6");
 	}
+	//Updates results page depending on what the user is hovering
 	$('#yessum').hover(function() {
 		$('#sumresult').empty().append(currentData['yesterday']['summary']);
 		reset_sums('#yessum');
@@ -136,7 +147,7 @@ $(function() {
 		reset_others('#wind');
 	});
 
-
+	//Gets called when main button is pressed
 	$('form').submit(function(event) {	
 		event.preventDefault();
 		var location = {
@@ -147,8 +158,9 @@ $(function() {
 		$('#go-down').css("display", "none");
 		$('#group2').css("display", "none");
 		$('#group3').css("display", "none");
+		//Ajax request to findWeather.php sending the location as input and calls init if successful
 		$.ajax({
-			type: 'POST',
+			type: 'GET',
 			url: 'findWeather.php',
 			data: location,
 			dataType: 'json',
@@ -158,6 +170,7 @@ $(function() {
 		});
 	});
 
+	//Scroll up & down buttons
 	$('#go-down').on('click', function(event) {
 		event.preventDefault();
 		$('#group3').ScrollTo();

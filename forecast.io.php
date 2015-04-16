@@ -12,26 +12,23 @@ class ForecastIO {
 		$this->api_key = $api_key;
 	}
 
+	// Make Forecast.io api request
 	private function requestData($latitude, $longitude, $units, $language = 'en', $timestamp = false) {
 		$validUnits = array('auto', 'us', 'si', 'ca', 'uk');
+		//Make sure $unit supplied valid
 		if (in_array($units, $validUnits)) {
 			$request_url = self::API_ENDPOINT .
 				$this->api_key . '/' .
 				$latitude . ',' . $longitude .
 				( $timestamp ? ',' . $timestamp : '') . 
 				'?units=' . $units . '&lang=' . $language;
-			if (class_exists('Buffer')) {
-				$cache = new Buffer();
-				$content = $cache->data($request_url);
-			}
-			else {
 				$content = file_get_contents($request_url);
-			}
 		}
 		else {
 			return false;
 		}
 		if (!empty($content)) {
+			//return contents of api request in json format
 			return json_decode($content);
 		}
 		else {

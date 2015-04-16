@@ -1,4 +1,3 @@
-
 @import "chartist.scss";
 
 /* variables */
@@ -10,36 +9,36 @@ $darker-gray: #3D3D3D;
 /* universal */
 
 body, html {
-	letter-spacing: 1.3px;
-	overflow: hidden;
+    letter-spacing: 1.3px;
+    overflow: hidden;
 }
 
 body {
-	font: 100% / 1.5 Arial;
+    font: 100% / 1.5 Arial;
 }
 
 * {
-	margin:0;
-	padding:0;
+    margin:0;
+    padding:0;
 }
 
 /* navbar */
 
 .navbar {
-	z-index: 9999;
-	position: fixed;
-	width: 100%;
-	background-color: rgba(1, 1, 1, 0.8);
-	border: none;
-	border-bottom: 1px solid $gray-white;
-	margin-bottom: 0;
-	border-radius: 0;
-	.navbar-brand {
-		text-transform: uppercase;
-	}
-	li a {
-		color: $dark-gray;
-	}
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border: none;
+    border-bottom: 1px solid $gray-white;
+    margin-bottom: 0;
+    border-radius: 0;
+    .navbar-brand {
+        text-transform: uppercase;
+    }
+    li a {
+        color: $dark-gray;
+    }
 }
 
 
@@ -50,16 +49,14 @@ body {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    -webkit-perspective: 300px;
     perspective: 300px;
     margin-bottom: 0;
-  }
+}
 
 .parallax__group {
     position: relative;
     height: 500px; /* fallback for older browsers */
     height: 100vh;
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
 
@@ -72,25 +69,21 @@ body {
 }
 
 .parallax__layer--fore {
-    -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
 }
 
 .parallax__layer--base {
-    -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
 }
 
 .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
 }
 
 .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
     transform: translateZ(-600px) scale(3);
     z-index: 2;
 }
@@ -107,7 +100,6 @@ body {
     position: absolute;
     left: 50%;
     top: 45%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -126,10 +118,10 @@ body {
     z-index: 3; /* slide under groups 1 and 3 */
 }
 #group2 #imageswap {
-    
+
     background-size: 100% 100%;
     background-repeat: no-repeat;
- }
+}
 
 #group3 {
     z-index: 4; /* slide over group 2 and 4 */
@@ -142,68 +134,62 @@ body {
 /* Search Page */
 
 #location {
-  	width: 40vw;
+    width: 40vw;
 }
 
 #labels {
-	text-align: center;
+    text-align: center;
 }
 
 #switcharoo {
-	text-align: center;
-  	height: 100px;
+    text-align: center;
+    height: 100px;
 }
 
 .result-left {
-  	float: left;
+    float: left;
 }
 .result-right {
-  	float: right;
+    float: right;
 }
 
 #go-down {
-	/*keep it within parallax group*/
-  	margin: auto;  
-  	position: absolute;
-  	left:0;
-  	right: 0;
+    /*keep it within parallax group*/
+    margin: auto;  
+    position: absolute;
+    left:0;
+    right: 0;
 
 }
 
 /* Details Page */
 
 #go-up {
-	text-align: center;
-	margin-top: 75px;
+    text-align: center;
+    margin-top: 75px;
 }
 
 #details {
-	/* overflow: scroll; 
-	overflow-y: auto;*/
-	height: 80vh;
-	margin-top: 100px;
+    /* overflow: scroll; 
+    overflow-y: auto;*/
+    height: 80vh;
+    margin-top: 100px;
     #resulthead {
         border-bottom: 1px solid $gray-white;
     }
     .gimmespace {
         margin-top: 4vh;
     }
-	.heads {
-	}
-	.hovertest {
-		cursor: default;
+    .heads {
+    }
+    .hovertest {
+        cursor: default;
         font-size: 0.7em;
-	}
-	.hoversum {
-		cursor: default;
+    }
+    .hoversum {
+        cursor: default;
         font-size: 0.7em;
-	}
-	/*#lefter {
-		float: left;
-		position: absolute;
-		display: block;
-		margin-top: px;
-	}*/
+    }
 }
 
 /* About and Contact Page */

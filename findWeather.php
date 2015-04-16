@@ -1,9 +1,11 @@
 <?php
 
+	//Forecast.io PHP wrapper
 	require_once 'forecast.io.php';
 
 	date_default_timezone_set('America/Toronto');
 
+	//Input your Forecast.IO API key here
 	$api_key = '94554c8a6559d0c2c5cd86c818780f32';
 	$units = 'si';
 	$lang = 'en';
@@ -12,13 +14,14 @@
 	$current_hour = date('G', $current);
 	$forecast = new ForecastIO($api_key);
 	$data = array();
-	$location = $_POST['location'];
-	
+	//Get location variable sent through Ajax request
+	$location = $_GET['location'];
 	$Address = urlencode($location);
 	//Use geocode to get latitude/longitude from input location
 	$request_url = "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyD7n4UdliKbLCTfpZ6D-mwERJqs8Ro-2Gw&address=".$Address."&sensor=true";
 	$json = json_decode(file_get_contents($request_url), true);
 	$status = $json['status'];
+	//If Geocode request worked
 	if ($status=="OK") {
 	    $Lat = $json['results'][0]['geometry']['location']['lat'];
 	    $Lon = $json['results'][0]['geometry']['location']['lng'];

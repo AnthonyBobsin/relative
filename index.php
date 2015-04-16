@@ -68,8 +68,7 @@
                             <canvas id="icon1" width="128" height="128"></canvas>
                     		<div><p id="sumresult"></p></div>
                     	</div>
-                    	<div class="col-md-5">
-                    		<div class="ct-chart ct-bobsin"></div>
+                    	<div class="col-md-5" id="chartpath">
                     	</div>
                     </div>
                 </div>
