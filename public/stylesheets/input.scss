@@ -153,13 +153,13 @@ p, a, button, input {
         color: white;
         border-radius: 0px;
         background: linear-gradient($orange 50%, $dark-orange 50%);
-        box-shadow: 0 2px 5px $dark-gray;
-        transition: box-shadow 500ms;
+        box-shadow: 0 5px 10px $dark-gray;
+        transition: box-shadow 1s;
         &:hover {
             background: $light-orange;
             border: $orange;
             background: linear-gradient($light-orange 50%, $orange 50%);
-            box-shadow: 0 9px 30px $dark-gray;
+            box-shadow: 0 15px 30px $dark-gray;
         }
     }
 }
@@ -225,7 +225,7 @@ p, a, button, input {
     /* overflow: scroll; 
     overflow-y: auto;*/
     height: 80vh;
-    margin-top: 100px;
+    margin-top: 50px;
     #resulthead {
         border-bottom: 1px solid $gray-white;
     }

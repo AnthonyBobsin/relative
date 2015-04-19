@@ -538,13 +538,13 @@ p, a, button, input {
     color: white;
     border-radius: 0px;
     background: linear-gradient(#FDA65C 50%, #FD9855 50%);
-    box-shadow: 0 2px 5px #8D8A8A;
-    transition: box-shadow 500ms; }
+    box-shadow: 0 5px 10px #8D8A8A;
+    transition: box-shadow 1s; }
     .title .mainbutt:hover {
       background: #FDB45C;
       border: #FDA65C;
       background: linear-gradient(#FDB45C 50%, #FDA65C 50%);
-      box-shadow: 0 9px 30px #8D8A8A; }
+      box-shadow: 0 15px 30px #8D8A8A; }
 
 /* style the groups ------------------------------- */
 #group1 {
@@ -595,7 +595,7 @@ p, a, button, input {
   /* overflow: scroll; 
     overflow-y: auto;*/
   height: 80vh;
-  margin-top: 100px; }
+  margin-top: 50px; }
   #details #resulthead {
     border-bottom: 1px solid #DBDADA; }
   #details .gimmespace {
