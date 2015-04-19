@@ -3,7 +3,7 @@ $(function() {
     var yesterday = 0;
     var current = 0;
     var currentData;
-    var loader_img = '<img src="./public/stylesheets/images/ajax-loader.gif"/>';
+    var loader_img = '<img id="loader_img" src="./public/stylesheets/images/ajax-loader.gif"/>';
 
     var skycons = new Skycons({"color": "#02A5D6"});
 
@@ -11,7 +11,7 @@ $(function() {
     init = function(data) {
         currentData = data;
         $('#go-down').css("display", "inline");
-        $('#go-down').empty().append(loader_img);
+        $('#go-down').append(loader_img);
         var icon = data['current']['icon'];
         //All the possible images to load depending on the weather
         var icon_img_map = {
@@ -183,6 +183,14 @@ $(function() {
     $('#go-down').css("display", "none");
     $('#group2').css("display", "none");
     $('#group3').css("display", "none");
+
+    /* NavBar Bottom border transition */
+    $('.navlink').hover(function() {
+        $(this).siblings('.bottomborder').addClass('borderTransition');
+    }, function() {
+        $(this).siblings('.bottomborder').removeClass('borderTransition');
+    });
+
 
 
 });

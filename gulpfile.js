@@ -11,3 +11,5 @@ gulp.task('default', function() {
         }))
         .pipe(gulp.dest('./public/stylesheets'))
 });
+
+gulp.watch('./public/stylesheets/*.scss', ['default']);

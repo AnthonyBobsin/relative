@@ -5,6 +5,14 @@
 $gray-white: #DBDADA;
 $dark-gray: #8D8A8A;
 $darker-gray: #3D3D3D;
+$light-orange: #FDB45C;
+$orange: #FDA65C;
+$dark-orange: #FD9855;
+$lg-screen: 1200px;
+$md-screen: 992px;
+$sm-screen: 768px;
+$paragraph: 'Muli', sans-serif;
+$header: 'Montserrat', sans-serif;
 
 /* universal */
 
@@ -22,22 +30,48 @@ body {
     padding:0;
 }
 
+label, h1, h2, h3, h4, h5, h6 {
+    font-family: $header;
+}
+
+p, a, button, input {
+    font-family: $paragraph;
+}
+
 /* navbar */
 
 .navbar {
     z-index: 9999;
     position: fixed;
     width: 100%;
-    background-color: rgba(1, 1, 1, 0.8);
+    background-color: $gray-white;
     border: none;
     border-bottom: 1px solid $gray-white;
     margin-bottom: 0;
     border-radius: 0;
     .navbar-brand {
         text-transform: uppercase;
+        font-family: $header;
+        color: $darker-gray;
+        &:hover {
+            color: $dark-orange;
+        }
     }
     li a {
-        color: $dark-gray;
+        color: $darker-gray;
+        font-size: 15px;
+    }
+    .navlink {
+        height: 45px;
+    }
+    .bottomborder {
+        height: 5px;
+        width: 0;
+        transition: width 250ms;
+        background-color: $dark-orange;
+    }
+    .borderTransition {
+        width: 100%;
     }
 }
 
@@ -97,12 +131,38 @@ body {
 /* centre the content in the parallax layers */
 .title {
     text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, -50%);
+    margin-top: 30vh;
+    h1 {
+        font-size: 2.5em;
+        @media(max-width: $sm-screen) {
+            font-size: 1.5em;
+        }
+    }
+    .form-control {
+        margin-top: 25px;
+        height: 50px;
+        font-size: 20px;
+        width: 100%;
+    }
+    .mainbutt {
+        width: 50%;
+        height: 50px;
+        margin-top: 25px;
+        background: $orange;
+        border: $dark-orange;
+        color: white;
+        border-radius: 0px;
+        background: linear-gradient($orange 50%, $dark-orange 50%);
+        box-shadow: 0 2px 5px $dark-gray;
+        transition: box-shadow 500ms;
+        &:hover {
+            background: $light-orange;
+            border: $orange;
+            background: linear-gradient($light-orange 50%, $orange 50%);
+            box-shadow: 0 9px 30px $dark-gray;
+        }
+    }
 }
-
 
 
 /* style the groups ------------------------------- */
@@ -133,9 +193,6 @@ body {
 
 /* Search Page */
 
-#location {
-    width: 40vw;
-}
 
 #labels {
     text-align: center;
@@ -153,13 +210,8 @@ body {
     float: right;
 }
 
-#go-down {
-    /*keep it within parallax group*/
-    margin: auto;  
-    position: absolute;
-    left:0;
-    right: 0;
-
+#loader_img {
+    margin-top: 50px;
 }
 
 /* Details Page */

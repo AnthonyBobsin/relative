@@ -431,20 +431,40 @@ body {
   margin: 0;
   padding: 0; }
 
+label, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; }
+
+p, a, button, input {
+  font-family: 'Muli', sans-serif; }
+
 /* navbar */
 .navbar {
   z-index: 9999;
   position: fixed;
   width: 100%;
-  background-color: rgba(1, 1, 1, 0.8);
+  background-color: #DBDADA;
   border: none;
   border-bottom: 1px solid #DBDADA;
   margin-bottom: 0;
   border-radius: 0; }
   .navbar .navbar-brand {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #3D3D3D; }
+    .navbar .navbar-brand:hover {
+      color: #FD9855; }
   .navbar li a {
-    color: #8D8A8A; }
+    color: #3D3D3D;
+    font-size: 15px; }
+  .navbar .navlink {
+    height: 45px; }
+  .navbar .bottomborder {
+    height: 5px;
+    width: 0;
+    transition: width 250ms;
+    background-color: #FD9855; }
+  .navbar .borderTransition {
+    width: 100%; }
 
 /* parallax */
 .parallax {
@@ -498,11 +518,33 @@ body {
 /* centre the content in the parallax layers */
 .title {
   text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  margin-top: 30vh; }
+  .title h1 {
+    font-size: 2.5em; }
+    @media (max-width: 768px) {
+      .title h1 {
+        font-size: 1.5em; } }
+  .title .form-control {
+    margin-top: 25px;
+    height: 50px;
+    font-size: 20px;
+    width: 100%; }
+  .title .mainbutt {
+    width: 50%;
+    height: 50px;
+    margin-top: 25px;
+    background: #FDA65C;
+    border: #FD9855;
+    color: white;
+    border-radius: 0px;
+    background: linear-gradient(#FDA65C 50%, #FD9855 50%);
+    box-shadow: 0 2px 5px #8D8A8A;
+    transition: box-shadow 500ms; }
+    .title .mainbutt:hover {
+      background: #FDB45C;
+      border: #FDA65C;
+      background: linear-gradient(#FDB45C 50%, #FDA65C 50%);
+      box-shadow: 0 9px 30px #8D8A8A; }
 
 /* style the groups ------------------------------- */
 #group1 {
@@ -528,9 +570,6 @@ body {
   background: white; }
 
 /* Search Page */
-#location {
-  width: 40vw; }
-
 #labels {
   text-align: center; }
 
@@ -544,12 +583,8 @@ body {
 .result-right {
   float: right; }
 
-#go-down {
-  /*keep it within parallax group*/
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0; }
+#loader_img {
+  margin-top: 50px; }
 
 /* Details Page */
 #go-up {
