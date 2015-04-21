@@ -446,7 +446,8 @@ p, a, button, input {
   border: none;
   border-bottom: 1px solid #DBDADA;
   margin-bottom: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  box-shadow: 0px 1px 3px #8D8A8A; }
   .navbar .navbar-brand {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -465,6 +466,12 @@ p, a, button, input {
     background-color: #FD9855; }
   .navbar .borderTransition {
     width: 100%; }
+  .navbar .navbar-toggle {
+    border: 1px solid #3D3D3D; }
+    .navbar .navbar-toggle .icon-bar {
+      background-color: #3D3D3D; }
+  .navbar .navbar-collapse {
+    border-top: 1px solid #8D8A8A; }
 
 /* parallax */
 .parallax {

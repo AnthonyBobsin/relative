@@ -49,6 +49,7 @@ p, a, button, input {
     border-bottom: 1px solid $gray-white;
     margin-bottom: 0;
     border-radius: 0;
+    box-shadow: 0px 1px 3px $dark-gray;
     .navbar-brand {
         text-transform: uppercase;
         font-family: $header;
@@ -72,6 +73,15 @@ p, a, button, input {
     }
     .borderTransition {
         width: 100%;
+    }
+    .navbar-toggle {
+        border: 1px solid $darker-gray;
+        .icon-bar {
+            background-color: $darker-gray;
+        }
+    }
+    .navbar-collapse {
+        border-top: 1px solid $dark-gray;
     }
 }
 
